@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-12 col-md-8 text-center">
+      <div class="card detail-card">
+        <img [src]="product?.imageURL" loading="lazy" class="card-img-top p-2" alt="{{product?.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{ product?.name }}</h5>
+          <p class="card-text price">${{ product?.price }}</p>
+          <p class="card-text description">{{ product?.description }}</p>
+          <a routerLink="/" class="btn btn-primary mx-2 p-2">Back To Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

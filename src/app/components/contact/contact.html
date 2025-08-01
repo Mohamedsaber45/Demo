@@ -1,0 +1,10 @@
+<div class="container my-5">
+  <h2>Contact Us</h2>
+  <p>If you have any questions, suggestions, or would like to get in touch, feel free to reach out to us.</p>
+  <form [formGroup]="form" (ngSubmit)="submitData()">
+    <input type="text" placeholder="Your Name" formControlName="name">
+    <input type="email" placeholder="Your Email" formControlName="email">
+    <textarea placeholder="Your Message" rows="5" formControlName="message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</div>

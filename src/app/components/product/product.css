@@ -1,0 +1,68 @@
+.list-group-item {
+  cursor: pointer;
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+.list-group-item:hover {
+  transform: scale(1.03);
+  background-color: #1c1b1b;
+  color: white;
+}
+
+.compact-card {
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  font-size: 0.9rem;
+}
+
+.compact-card .card-img-top {
+  height: 150px;
+  object-fit: cover;
+  padding: 5px;
+}
+
+.compact-card .card-title {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+}
+
+.compact-card .price {
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.btn-row .btn {
+  flex: 1;
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-sm.btn-primary {
+  background: #1d4ed8;
+  border: none;
+  color: #fff;
+  transition: filter .2s;
+}
+
+.btn-sm.btn-primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn-sm.btn-success {
+  background: #16a34a;
+  border: none;
+  color: #fff;
+  transition: filter .2s;
+}
+
+.btn-sm.btn-success:hover {
+  filter: brightness(1.1);
+}

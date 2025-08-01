@@ -1,0 +1,46 @@
+<div class="cart-wrapper">
+  <h4 class="cart-title">Your Cart <span class="badge">{{ cart.getTotalCount() }} items</span></h4>
+
+  <div *ngIf="cart.items.length; else empty">
+    <div *ngFor="let item of cart.items" class="cart-item">
+      <div class="info">
+        <div class="name-qty">
+          <strong class="product-name">{{ item.product.name }}</strong>
+          <div class="qty-controls">
+            <button (click)="decrement(item)" aria-label="Decrease" class="qty-btn">−</button>
+            <span class="qty">{{ item.quantity }}</span>
+            <button (click)="increment(item)" aria-label="Increase" class="qty-btn">+</button>
+          </div>
+        </div>
+        <div class="price-per-item">
+          ${{ item.product.price | number:'1.2-2' }} each
+        </div>
+      </div>
+
+      <div class="subtotal">
+        ${{ (item.product.price * item.quantity) }}
+      </div>
+
+      <div class="actions">
+        <button (click)="remove(item)" class="btn remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div class="summary">
+      <div class="total-row">
+        <div class="label">Total:</div>
+        <div class="value">${{ cart.getTotalPrice() }}</div>
+      </div>
+      <div class="summary-actions">
+        <button class="btn secondary" (click)="clear()">Clear Cart</button>
+        <a routerLink="/payment" class="btn primary">Checkout</a>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #empty>
+    <div class="empty-state">
+      <p>Your cart is empty.</p>
+    </div>
+  </ng-template>
+</div>
